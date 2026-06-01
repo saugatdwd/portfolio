@@ -6,11 +6,13 @@ import { ProjectsSection } from "@/components/projects-section"
 import { SkillsSection } from "@/components/skills-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
+import { JsonLd } from "@/components/json-ld"
 import { Toaster } from "@/components/ui/toaster"
 
 export default function Home() {
   return (
     <>
+      <JsonLd />
       <Navbar />
       <main>
         <HeroSection />

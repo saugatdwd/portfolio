@@ -72,32 +72,33 @@ export function ProjectsSection() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <Card
-                key={project.title}
-                className="overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group"
-                style={{
-                  transitionDelay: `${index * 100}ms`,
-                }}
-              >
-                <CardHeader className="p-0">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span key={tech} className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">
-                        {tech}
-                      </span>
-                    ))}
+              <article key={project.title}>
+                <Card
+                  className="overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 group h-full"
+                  style={{
+                    transitionDelay: `${index * 100}ms`,
+                  }}
+                >
+                  <CardHeader className="p-0">
+                    <div className="relative h-48 overflow-hidden">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={`Screenshot of ${project.title} project`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span key={tech} className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">
+                          {tech}
+                        </span>
+                      ))}
                   </div>
                 </CardContent>
                 <CardFooter className="p-6 pt-0 flex gap-2">
@@ -119,6 +120,7 @@ export function ProjectsSection() {
                   )}
                 </CardFooter>
               </Card>
+              </article>
             ))}
           </div>
         </div>

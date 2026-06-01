@@ -39,7 +39,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold text-primary">
+          <Link href="/" className="text-xl font-bold text-primary" aria-label="Saugat Dawadi - Home">
             {"<Saugat/>"}
           </Link>
 
@@ -49,6 +49,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                aria-label={`Navigate to ${link.label} section`}
               >
                 {link.label}
               </a>
@@ -59,6 +60,7 @@ export function Navbar() {
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="ml-2"
+                aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
               >
                 {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
@@ -67,11 +69,21 @@ export function Navbar() {
 
           <div className="md:hidden flex items-center gap-2">
             {mounted && (
-              <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              >
                 {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
             )}
-            <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
@@ -85,6 +97,7 @@ export function Navbar() {
                 href={link.href}
                 className="block text-sm text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label={`Navigate to ${link.label} section`}
               >
                 {link.label}
               </a>

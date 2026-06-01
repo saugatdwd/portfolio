@@ -23,7 +23,9 @@ export function HeroSection() {
         >
           <div className="inline-block mb-4 text-primary text-sm font-mono">{"// Hello World"}</div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 text-balance">Frontend Developer</h1>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 text-balance">
+            Saugat Dawadi — Frontend Developer
+          </h1>
 
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance">
             Crafting pixel-perfect, accessible user interfaces with modern web technologies
@@ -31,13 +33,17 @@ export function HeroSection() {
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
             <Button size="lg" asChild>
-              <a href="#projects">View My Work</a>
+              <a href="#projects" aria-label="View my featured projects">
+                View My Work
+              </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="#contact">Get In Touch</a>
+              <a href="#contact" aria-label="Get in touch with me">
+                Get In Touch
+              </a>
             </Button>
             <Button size="lg" variant="secondary" asChild>
-              <a href="/resume.pdf" download>
+              <a href="/resume.pdf" download aria-label="Download my resume as PDF">
                 Download Resume
               </a>
             </Button>
@@ -49,28 +55,35 @@ export function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Visit my GitHub profile"
             >
-              <Github className="h-6 w-6" />
+              <Github className="h-6 w-6" aria-hidden="true" />
             </a>
             <a
               href="https://linkedin.com/in/saugat-dawadi-475b0619b"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Visit my LinkedIn profile"
             >
-              <Linkedin className="h-6 w-6" />
+              <Linkedin className="h-6 w-6" aria-hidden="true" />
             </a>
             <a
               href="mailto:saugatdwd@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Send me an email"
             >
-              <Mail className="h-6 w-6" />
+              <Mail className="h-6 w-6" aria-hidden="true" />
             </a>
           </div>
         </div>
 
-        <a href="#about" className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-muted-foreground" />
+        <a
+          href="#about"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+          aria-label="Scroll to About section"
+        >
+          <ArrowDown className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
         </a>
       </div>
     </section>

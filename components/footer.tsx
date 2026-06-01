@@ -7,7 +7,9 @@ export function Footer() {
     <footer className="border-t border-border py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-muted-foreground">© {currentYear} Frontend Developer. All rights reserved.</div>
+          <div className="text-sm text-muted-foreground">
+            © {currentYear} Saugat Dawadi. All rights reserved.
+          </div>
 
           <div className="flex items-center gap-6">
             <a
@@ -15,22 +17,25 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Visit my GitHub profile"
             >
-              <Github className="h-5 w-5" />
+              <Github className="h-5 w-5" aria-hidden="true" />
             </a>
             <a
               href="https://linkedin.com/in/saugat-dawadi-475b0619b"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Visit my LinkedIn profile"
             >
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-5 w-5" aria-hidden="true" />
             </a>
             <a
               href="mailto:saugatdwd@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="Send me an email"
             >
-              <Mail className="h-5 w-5" />
+              <Mail className="h-5 w-5" aria-hidden="true" />
             </a>
           </div>
         </div>
