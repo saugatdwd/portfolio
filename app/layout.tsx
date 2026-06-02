@@ -11,7 +11,7 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 })
 
-const SITE_URL = "https://www.saugatdawadi.com"
+const SITE_URL = "https://www.saugatdawadi.com.np"
 const SITE_NAME = "Saugat Dawadi - Frontend Developer"
 const SITE_DESCRIPTION =
   "Frontend developer based in Kathmandu, Nepal — specializing in React, Next.js, and TypeScript. Building pixel-perfect, accessible web experiences."
@@ -68,9 +68,9 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "/profile.png",
+        width: 400,
+        height: 400,
         alt: "Saugat Dawadi - Frontend Developer",
       },
     ],
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
     creator: "@saugatdawadi",
-    images: ["/og-image.png"],
+    images: ["/profile.png"],
   },
   alternates: {
     canonical: SITE_URL,
