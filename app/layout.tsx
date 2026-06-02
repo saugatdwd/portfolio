@@ -11,10 +11,10 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 })
 
-const SITE_URL = "https://saugatdawadi.com"
+const SITE_URL = "https://www.saugatdawadi.com"
 const SITE_NAME = "Saugat Dawadi - Frontend Developer"
 const SITE_DESCRIPTION =
-  "Saugat Dawadi is a frontend developer based in Kathmandu, Nepal, specializing in React, Next.js, and TypeScript. Crafting pixel-perfect, accessible user interfaces with modern web technologies."
+  "Frontend developer based in Kathmandu, Nepal — specializing in React, Next.js, and TypeScript. Building pixel-perfect, accessible web experiences."
 
 export const viewport: Viewport = {
   themeColor: [

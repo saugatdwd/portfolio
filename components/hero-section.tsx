@@ -37,7 +37,7 @@ export function HeroSection() {
           <div className="px-5 sm:px-6 pt-14 pb-6">
             {/* Name + Badge */}
             <div className="flex items-center gap-2 mb-1">
-              <h1 className="text-xl sm:text-2xl font-bold text-foreground">Saugat Dawadi</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-foreground">Saugat Dawadi — Frontend Developer</h1>
               <BadgeCheck className="h-5 w-5 text-primary shrink-0" aria-hidden="true" />
             </div>
 
